@@ -1,0 +1,53 @@
+// Define color variables
+$bg-color: #ecf0f1;
+$card-bg-color: white;
+$text-color: #333;
+$paragraph-color: #555;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+// Mixin for Flexbox Centering
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Base styles
+body, html {
+  height: 100%;
+  margin: 0;
+  @include flexbox-center;
+  background-color: $bg-color;
+}
+
+.qr-card {
+  width: 350px;
+  background-color: $card-bg-color;
+  box-shadow: 0 4px 8px $shadow-color;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Arial', sans-serif; // Consider importing Outfit or your preferred font
+}
+
+.qr-image img {
+  max-width: 100%;
+  display: block; // to remove extra space beneath the image
+}
+
+.qr-info {
+  padding: 20px;
+  h1 {
+    font-size: 18px;
+    color: $text-color;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    color: $paragraph-color;
+    line-height: 1.5;
+  }
+}
